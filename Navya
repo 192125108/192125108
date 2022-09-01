@@ -1,0 +1,210 @@
+#include<stdio.h>
+ 
+int main()
+{
+    int i, j, rows, columns;
+     
+    printf("Please Enter the Number of rows:\n");
+    scanf("%d", &rows);
+    
+    printf("Please Enter the Number of Columns:\n");
+    scanf("%d", &columns);
+	 
+    for(i = 0; i < rows; i++)
+    {
+        for(j = 0; j < columns; j++)
+	{
+           printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+#include <stdio.h>
+int main() {
+
+  int i, n;
+
+  // initialize first and second terms
+  int t1 = 0, t2 = 1;
+
+  // initialize the next term (3rd term)
+  int nextTerm = t1 + t2;
+
+  // get no. of terms from user
+  printf("Enter the number of terms: ");
+  scanf("%d", &n);
+
+  // print the first two terms t1 and t2
+  printf("Fibonacci Series: %d, %d, ", t1, t2);
+
+  // print 3rd to nth terms
+  for (i = 3; i <= n; ++i) {
+    printf("%d, ", nextTerm);
+    t1 = t2;
+    t2 = nextTerm;
+    nextTerm = t1 + t2;
+  }
+
+  return 0;
+}
+
+
+
+ Fibonacci
+
+#include <stdio.h>
+int main() {
+
+  int i, n;
+
+  // initialize first and second terms
+  int t1 = 0, t2 = 1;
+
+  // initialize the next term (3rd term)
+  int nextTerm = t1 + t2;
+
+  // get no. of terms from user
+  printf("Enter the number of terms: ");
+  scanf("%d", &n);
+
+  // print the first two terms t1 and t2
+  printf("Fibonacci Series: %d, %d, ", t1, t2);
+
+  // print 3rd to nth terms
+  for (i = 3; i <= n; ++i) {
+    printf("%d, ", nextTerm);
+    t1 = t2;
+    t2 = nextTerm;
+    nextTerm = t1 + t2;
+  }
+
+  return 0;
+}
+
+
+
+
+Marks
+
+#include<stdio.h>
+void main()
+{
+    int markspy,marksC,marksmath,marksphy;
+    printf("Enter your Python Marks: ");
+    scanf("%d",&markspy);
+    printf("Enter your C Programming marks ");
+    scanf("%d",&marksC);
+    printf("Enter your Mathematics marks ");
+    scanf("%d",&marksmath);
+    printf("Enter your Physics marks ");
+    scanf("%d",&marksphy);
+    int Total = (markspy+marksC+marksmath+marksphy);
+     printf("Total = %d ",Total);
+    int Aggregate = (Total/4);
+    printf("\nThe Aggregate is: %d", Aggregate); 
+    
+    if(Aggregate <0 || Aggregate>100)
+    {
+        printf("Wrong Entry");
+    }
+    else if(Aggregate<50)
+    {
+        printf("Grade F");
+    }
+    else if(Aggregate>=60 && Aggregate<75)
+    {
+        printf("First Division");
+    }
+    else if(Aggregate>=50 && Aggregate<60)
+    {
+        printf("Second Division");
+    }
+    else if(Aggregate>=40 && Aggregate<50)
+    {
+        printf("Third Division");
+    }
+    else if(Aggregate>=80 && Aggregate<100)
+    {
+        printf("\nDistinction");
+    }
+    else
+    {
+        printf("Fail");
+    }
+}. 
+
+
+Fraction no
+/Program to print the given float (fractional number) number 
+#include<stdio.h>
+int main()
+{
+	float num;
+	printf("Enter a fractional number:");
+	scanf("%f",&num); 	
+	printf("Entered number : %f",num);	
+	return  0;
+}
+
+Perfect number or not
+
+include <stdio.h>
+#include <math.h>
+
+// function to check if a number - n is perfect or not
+// returns 1 if n is perfect
+// returns 0 if n is not perfect
+int isPerfect(long long int n) {
+
+	long long int dsum = 0;	// sum of divisors
+	long long int i;
+
+	// the loop finds all diviors of n
+	for (i = 1; i <= sqrt(n); ++i) {
+		if (n % i == 0) {
+
+			if (i == n / i) {
+				dsum += i;
+			}
+			else {
+				dsum += i;
+				dsum += n / i;
+			}
+
+		}
+	}
+
+	// we are only counting proper diviors of n (less than n)
+	// so we need to substract n from the final sum
+	dsum = dsum - n;
+
+	if (dsum == n) return 1;
+	else		return 0;
+
+}
+
+int main() {
+
+	long long int n, i, temp;
+	printf("Enter n: ");
+	scanf("%d", &n);
+
+	i = 1;
+
+	// iterating all numbers from 1
+	// and checking if the number is perfect or not
+	while (n > 0) {
+
+		if (isPerfect(i) == 1) {
+			printf("%d ", i);
+			n = n - 1;
+		}
+		i = i + 1;
+
+	}
+
+	printf("\n");
+
+}
